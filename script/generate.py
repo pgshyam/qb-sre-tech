@@ -66,6 +66,7 @@ def main():
     parser = argparse.ArgumentParser(description = 'Generate Files')
     parser.add_argument('-d', default="/tmp/data", action="store", help='directory path that hosts generated files')
     parser.add_argument('-f', default="file", action="store", help='prefix of the filename of generated file')
+    parser.add_argument('-n', default=100, action="store", help='number of files to generate')
     args = parser.parse_args()
 
     if not path.isdir(args.d):
@@ -75,7 +76,7 @@ def main():
     Generate.filename_prefix = args.f
     file_5_addition = "This is every 5th file!"
 
-    Generate.generate(100, file_5_addition)
+    Generate.generate(int(args.n), file_5_addition)
 
 if __name__ == "__main__":
     main()  

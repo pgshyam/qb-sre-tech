@@ -2,8 +2,18 @@ Python code to generate 100 files. Each file contains a line between 1 and 65 pr
 Line "This is every 5th file!" appears in every fifth file
 Every 7th file contains the concated contents of all the previous files. If it is a common file (every 7th and also the 5th), applies only every 7th file rule.
 
-Assumption:
-  /tmp/data directory exists
+- usage:
+    - format : python generate.py -d <DIR_PATH> -f <FILE_PREFIX> -n <GEN_FILE_COUNT>
+    
+        - DIR_PATH : directory path for hosting generated files   
+            default: /tmp/data
+        - FILE_PREFIX : file prefix name
+            default: file
+        - GEN_FILE_COUNT: number of files to generate
+            default: 100
+
+    - example : python generate.py -d "/tmp/data" -f "file" -n 65
+
 
 - generate.py
     - module which hosts Generator class which has 2 class variables, dirpath and filename_prefix
@@ -18,10 +28,6 @@ Assumption:
             main function that generates files and adds content as per the rules.
             max_file_count - number of files to be generated
             file_5_addition - additional text that needs to go into every fifth file
-
-  usage:
-    set the dirpath and filename_prefix class variables of Generator class   
-    invoke generate(100, "This is every 5th file!") to generate the files
 
 - runner.py
     Test suite for running unit tests
