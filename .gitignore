@@ -1,0 +1,7 @@
+script/generate.py.orig
+script/*.pyc
+terraform/.terraform/terraform.tfstate
+terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.26.0_x4
+terraform/.terraform/plugins/darwin_amd64/lock.json
+terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.26.0_x4
+.vscode/settings.json
